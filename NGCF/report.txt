@@ -1,0 +1,61 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 1 files
+Detected 4 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: NGCF.py
+--------------------------------------------------------------------------------
+NGCF.py:93:30: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+NGCF.py:94:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+NGCF.py:95:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+NGCF.py:519:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'NGCF.py'
+ outputting to 'NGCF_v2.py'
+--------------------------------------------------------------------------------
+
+53:21: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+54:25: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+55:25: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+62:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+63:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+93:30: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+93:30: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+94:34: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+94:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+95:34: INFO: Added keywords to args of function 'tf.nn.embedding_lookup'
+95:34: WARNING: tf.nn.embedding_lookup requires manual check. `partition_strategy` has been removed from tf.nn.embedding_lookup.  The 'div' strategy will be used by default.
+112:19: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+117:22: INFO: Changing tf.contrib.layers xavier initializer to a tf.compat.v1.keras.initializers.VarianceScaling and converting arguments.
+
+198:34: INFO: Renamed 'tf.sparse_tensor_dense_matmul' to 'tf.sparse.sparse_dense_matmul'
+216:29: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+237:34: INFO: Renamed 'tf.sparse_tensor_dense_matmul' to 'tf.sparse.sparse_dense_matmul'
+241:25: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+259:34: INFO: Renamed 'tf.sparse_tensor_dense_matmul' to 'tf.sparse.sparse_dense_matmul'
+265:29: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+275:21: INFO: Added keywords to args of function 'tf.reduce_sum'
+276:21: INFO: Added keywords to args of function 'tf.reduce_sum'
+283:15: INFO: Renamed 'tf.log' to 'tf.math.log'
+284:30: INFO: Added keywords to args of function 'tf.reduce_mean'
+309:25: INFO: Renamed 'tf.random_uniform' to 'tf.random.uniform'
+311:18: INFO: Renamed 'tf.sparse_retain' to 'tf.sparse.retain'
+313:25: INFO: Renamed 'tf.div' to 'tf.compat.v1.div'
+366:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+373:21: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+375:13: INFO: Renamed 'tf.ConfigProto' to 'tf.compat.v1.ConfigProto'
+377:11: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+392:21: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+411:21: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+416:17: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+519:12: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
